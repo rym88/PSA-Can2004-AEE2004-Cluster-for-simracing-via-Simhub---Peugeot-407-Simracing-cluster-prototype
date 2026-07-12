@@ -1,0 +1,15 @@
+var r   = isnull($prop('DataCorePlugin.GameData.Rpms'), 0);
+var s   = isnull($prop('DataCorePlugin.GameData.SpeedKmh'), 0);
+var w   = isnull($prop('DataCorePlugin.GameData.WaterTemperature'), 90);
+var o   = isnull($prop('DataCorePlugin.GameData.OilTemperature'), 95);
+var f   = isnull($prop('DataCorePlugin.GameData.FuelPercent'), 50);
+var lt  = isnull($prop('DataCorePlugin.GameData.TurnIndicatorLeft'), false) ? 1 : 0;
+var rt  = isnull($prop('DataCorePlugin.GameData.TurnIndicatorRight'), false) ? 1 : 0;
+
+return 'rpm:' + Math.round(r) +
+       ';spd:' + Math.round(s) +
+       ';wtr:' + Math.round(w) +
+       ';oil:' + Math.round(o) +
+       ';ful:' + Math.round(f) +
+       ';lt:' + lt + ';rt:' + rt +
+       ';ign:1\n';
